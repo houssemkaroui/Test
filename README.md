@@ -94,3 +94,17 @@ Ce projet est sous licence MIT.
 ---
 
 > Projet personnel de blog temps réel avec Socket.io ✨
+
+## 📜 Capture
+![image](https://github.com/user-attachments/assets/dc3000e1-183d-4af9-a4d4-5699bec1924c)
+
+![image](https://github.com/user-attachments/assets/a86b7738-a4da-4b38-bda8-c77c0f9113c2)
+
+
+![article liste](https://github.com/user-attachments/assets/ef4a44c6-cf52-4487-8b0f-2ac6930e04ca)
+
+![addarticle](https://github.com/user-attachments/assets/316ce1ca-29a0-4202-a5d6-2bf28612a61d)
+
+![image](https://github.com/user-attachments/assets/53964a94-546b-4974-b0b1-dccbced4c22a)
+
+![image](https://github.com/user-attachments/assets/0bd38627-ae57-4d05-9f78-2ad1ba49a19a)
