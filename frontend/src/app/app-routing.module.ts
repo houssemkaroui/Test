@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticlesComponent } from './articles/list/articles.component';
 import { ArticleFormComponent } from './articles/form/article-form.component';
 import { CommentsDialogComponent } from './comments/comments.component';
@@ -12,7 +11,6 @@ const routes: Routes = [
   { path: '', redirectTo: '/articles', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'articles', component: ArticlesComponent, canActivate: [AuthGuard] },
   { path: 'articles/new', component: ArticleFormComponent, canActivate: [AuthGuard] },
   { path: 'articles/edit/:id', component: ArticleFormComponent, canActivate: [AuthGuard] },
