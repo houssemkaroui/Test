@@ -1,0 +1,21 @@
+
+<mat-dialog-content>
+  <div class="comments-container">
+    <div *ngIf="comments.length === 0" class="no-comments">Aucun commentaire pour l'instant.</div>
+    <div *ngFor="let comment of comments" class="comment-item">
+      <div class="author">{{ comment.author?.username || 'Utilisateur inconnu' }}</div>
+      <div class="content">{{ comment.content }}</div>
+      <div class="timestamp">{{ comment.createdAt | date: 'short' }}</div>
+    </div>
+  </div>
+
+  <mat-form-field class="comment-input" appearance="outline">
+    <mat-label>Nouveau commentaire</mat-label>
+    <input matInput [(ngModel)]="newComment" (keyup.enter)="sendComment()" />
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Fermer</button>
+  <button mat-raised-button color="primary" (click)="sendComment()">Envoyer</button>
+</mat-dialog-actions>

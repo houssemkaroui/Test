@@ -1,0 +1,37 @@
+<div class="register-wrapper">
+  <mat-card class="register-card">
+    <h2 class="title">Créer un compte</h2>
+
+    <form (ngSubmit)="register()" class="register-form">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nom</mat-label>
+        <input matInput [(ngModel)]="user.username" name="username" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" [(ngModel)]="user.email" name="email" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Mot de passe</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="user.password" name="password" required />
+
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Rôle</mat-label>
+        <mat-select [(ngModel)]="user.role" name="role" required>
+          <mat-option value="reader">Lecteur</mat-option>
+          <mat-option value="writer">Rédacteur</mat-option>
+          <mat-option value="editor">Éditeur</mat-option>
+          <mat-option value="admin">Admin</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="submit-btn" type="submit">
+        S'inscrire
+      </button>
+    </form>
+  </mat-card>
+</div>

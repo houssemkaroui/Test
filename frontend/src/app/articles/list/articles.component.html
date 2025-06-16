@@ -1,0 +1,65 @@
+<div class="articles-container">
+  <div class="header">
+    <h2 class="title">📰 Liste des Articles</h2>
+    <div class="header-actions">
+      <button mat-button color="warn" (click)="logout()">Déconnexion</button>
+      <button mat-raised-button color="primary" (click)="openCreateModal()">+ Créer un article</button>
+    </div>
+  </div>
+
+  <mat-card class="article-table-card">
+    <table mat-table [dataSource]="articles" class="mat-elevation-z8">
+
+      <!-- Titre -->
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> Titre </th>
+        <td mat-cell *matCellDef="let article"> {{ article.title }} </td>
+      </ng-container>
+
+      <!-- Auteur -->
+      <ng-container matColumnDef="author">
+        <th mat-header-cell *matHeaderCellDef> Auteur </th>
+        <td mat-cell *matCellDef="let article"> {{ article.author?.username }} </td>
+      </ng-container>
+
+      <!-- Date de création -->
+      <ng-container matColumnDef="createdAt">
+        <th mat-header-cell *matHeaderCellDef> Créé le </th>
+        <td mat-cell *matCellDef="let article"> {{ article.createdAt | date: 'short' }} </td>
+      </ng-container>
+
+      <!-- Commentaires -->
+      <ng-container matColumnDef="comments">
+        <th mat-header-cell *matHeaderCellDef> 💬 Commentaires </th>
+        <td mat-cell *matCellDef="let article">
+          <button mat-icon-button color="primary" (click)="openCommentsModal(article)">
+            <mat-icon
+              matBadge="{{ getUnreadCount(article._id) }}"
+              [matBadgeHidden]="getUnreadCount(article._id) === 0"
+              matBadgeColor="warn"
+              [matBadgeOverlap]="false"
+            >
+              chat
+            </mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <!-- Actions -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let article">
+          <button mat-icon-button color="accent" (click)="openEditModal(article)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteArticle(article._id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </mat-card>
+</div>

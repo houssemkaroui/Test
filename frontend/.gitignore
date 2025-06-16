@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+# Build
+dist/
+.angular/
+coverage/
+# IDEs et autres fichiers locaux
+.idea/
+.vscode/
+*.log
+*.tgz
+.DS_Store

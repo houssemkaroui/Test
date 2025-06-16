@@ -1,0 +1,40 @@
+/* .comment {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  .full-width {
+    width: 100%;
+    margin-top: 10px;
+  }
+   */
+
+   .comments-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+  }
+  
+  .comment-item {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .comment-item .author {
+    font-weight: bold;
+  }
+  
+  .comment-item .timestamp {
+    font-size: 0.8em;
+    color: gray;
+  }
+  
+  .comment-input {
+    width: 100%;
+  }
+  
+  .no-comments {
+    text-align: center;
+    color: gray;
+    font-style: italic;
+  }
+  

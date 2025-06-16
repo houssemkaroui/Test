@@ -1,0 +1,26 @@
+<div class="login-wrapper">
+  <mat-card class="login-card">
+    <h2 class="login-title">LOGIN</h2>
+
+    <form (ngSubmit)="login()" class="login-form">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email" [(ngModel)]="credentials.email" required />
+        <mat-error *ngIf="submitted && !credentials.email">Required email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" name="password" [(ngModel)]="credentials.password" required />
+
+        <mat-error *ngIf="submitted && !credentials.password">Required password</mat-error>
+      </mat-form-field>
+
+      <div class="row-actions">
+        <a routerLink="/register" class="forgot-link">Créer un compte</a>
+      </div>
+
+      <button mat-raised-button color="primary" class="login-btn" type="submit">Login</button>
+    </form>
+  </mat-card>
+</div>

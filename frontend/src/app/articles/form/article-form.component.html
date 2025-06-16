@@ -1,0 +1,33 @@
+<div class="article-form-wrapper">
+  <mat-card class="article-form-card">
+    <h2 class="form-title">
+      {{ isEdit ? 'Modifier' : 'Créer' }} un Article
+    </h2>
+
+    <form (ngSubmit)="saveArticle()" class="article-form" enctype="multipart/form-data">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Titre</mat-label>
+        <input matInput [(ngModel)]="article.title" name="title" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Contenu</mat-label>
+        <input matInput rows="5" [(ngModel)]="article.content" name="content" required/>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Étiquettes (séparées par des virgules)</mat-label>
+        <input matInput [(ngModel)]="tagsInput" name="tags" />
+      </mat-form-field>
+
+      <div class="file-upload">
+        <label for="image">Image</label>
+        <input id="image" type="file" (change)="onFileSelected($event)" accept="image/*" />
+      </div>
+
+      <button mat-raised-button color="primary" type="submit" class="submit-btn">
+        {{ isEdit ? 'Mettre à jour' : 'Créer' }}
+      </button>
+    </form>
+  </mat-card>
+</div>

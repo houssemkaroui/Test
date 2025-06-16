@@ -1,0 +1,52 @@
+.article-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.article-form-card {
+  width: 100%;
+  max-width: 550px;
+  padding: 32px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.article-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+mat-form-field.full-width {
+  width: 100%;
+  display: block;
+}
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.file-upload input[type="file"] {
+  margin-top: 6px;
+}
+
+.submit-btn {
+  width: 100%;
+  font-weight: 600;
+  margin-top: 16px;
+}
