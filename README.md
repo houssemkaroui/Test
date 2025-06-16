@@ -19,7 +19,6 @@ Une plateforme de blog en temps réel construite avec la stack **MongoDB + Expre
 - Socket.io pour :
   - Commentaires en direct
   - Notifications des nouveaux commentaires
-  - Synchronisation des likes
 
 ## 📁 Structure du projet
 
@@ -56,7 +55,7 @@ cd Test
 cd backend
 npm install
 cp .env.example .env   # ou créez un .env avec vos variables
-npm run dev
+npm start
 ```
 
 Variables d'environnement (.env) :
@@ -78,13 +77,6 @@ ng serve
 
 Accédez à : `http://localhost:4200`
 
-## 🧪 Test de l'API
-
-Utilisez la collection Postman fournie (optionnelle) pour tester les routes :
-- Auth : `/api/auth/*`
-- Articles : `/api/articles/*`
-- Commentaires : `/api/comments/*`
-
 ## 🧠 Technologies
 
 - **Frontend**: Angular, Angular Material, RxJS, Socket.io-client
@@ -93,7 +85,7 @@ Utilisez la collection Postman fournie (optionnelle) pour tester les routes :
 
 ## 👥 Auteurs
 
-- [Houssem Karoui](https://github.com/houssemkaroui)
+- [Houssem Karoui]
 
 ## 📜 Licence
 
