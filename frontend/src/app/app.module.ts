@@ -24,7 +24,6 @@ import { RegisterComponent } from './auth/register/register.component';
 import { ArticlesComponent } from './articles/list/articles.component';
 import { ArticleFormComponent } from './articles/form/article-form.component';
 import { CommentsDialogComponent } from './comments/comments.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 @NgModule({
@@ -34,8 +33,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     RegisterComponent,
     ArticlesComponent,
     ArticleFormComponent,
-    CommentsDialogComponent,
-    DashboardComponent
+    CommentsDialogComponent
   ],
   imports: [
     BrowserModule,
